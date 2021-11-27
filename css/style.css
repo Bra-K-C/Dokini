@@ -21,17 +21,17 @@ p{
 
 
 .titre{
-  position: absolute;
+  position: relative;
   font-size: 200%;
   font-weight:bold;
   z-index: =2;
 }
 
 .wallpaper{
-  position: relative;
+  position: absolute;
   z-index: =1;
   background-attachment: local;
-  height: 50%;
+  height: 80px;
   width:auto;
 }
 
