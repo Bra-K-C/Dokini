@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
+<head>
+  <title class="titre">Inscription</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="\ccs\bootstrap.min.css" />
+  <link rel="stylesheet" href="\ccs\styleRegister.css" />
+</head>
+
 <body>
+  <header>
+    <h1>
+      <img class="wallpaper" src="\IMG\mairie.jpg">
+      <span class="titre">Connexion</span>
+    </h1>
+  </header>
 
-
-<form id="form" method="post" action="" name="signup-form">
-    <div>
-        <div>
-            <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
-        </div>
-        <div class="form-element">
-            <input type="email" name="email" placeholder="Email" required />
-        </div>
-        <div class="form-element">
-            <input type="password" name="password" id= "password" placeholder="Password" required />
-        </div>
-        <div class="form-element">
-            <input type="password" name="cpassword" id="cpassword" placeholder="Confirm password" required />
-        </div>
-        <button type="submit" name="register" value="register">S'enregistrer</button>
-        <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
+  <form id="form" method="post" action="" name="signup-form">
+    <div class="bout">
+      <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <br />
+      <input type="password" name="password" id= "password" placeholder="Password" required />
+      <input type="password" name="cpassword" id="cpassword" placeholder="Confirm password" required />
+      <br />
+      <button type="submit" name="register" value="register">S'enregistrer</button>
+      <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
     </div>
-
-
-</form>
+  </form>
+</body>
 
 <?php
 session_start();
@@ -69,7 +75,3 @@ if (isset($_POST['register'])) {
 
 }
 ?>
-
-
-</body>
-</html>
