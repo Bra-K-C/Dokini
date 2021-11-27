@@ -49,4 +49,3 @@ if (isset($_GET['logout']))
     ?>
 </header>
 </body>
-

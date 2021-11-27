@@ -17,15 +17,13 @@
   </header>
 
   <form method="post" action="" name="login-form">
-    <div>
-      <div class="bout">
+    <div class="bout">
         <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
         <input type="password" name="password" placeholder="Password" required />
         <br />
         <button type="submit" name="login" value="login">Login</button>
-      </div>
-      <br />
-      <form> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
+        <br />
+        <form> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
     </div>
   </form>
 
