@@ -6,12 +6,23 @@ nav{
   text-align: center;
   width: 100%;
   background-color:gold ;
-  font-size:160%;
+  font-size:150%;
 }
 
 header{
   padding:5px;
   text-align:center;
+}
+
+
+p{
+  color: lightseagreen;
+  font-size: 110%;
+}
+
+.titre{
+  font-size: 160%;
+  font-weight:bold;
 }
 
 
@@ -28,5 +39,4 @@ header{
   width: 16%;
   color: black;
   text-decoration:none;
-  font-weight:bold;
 }
