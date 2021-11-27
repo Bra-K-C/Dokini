@@ -3,7 +3,6 @@
 }
 
 header{
-  text-align:center;
   background-color: khaki;
   height: 90px;
 }
@@ -26,10 +25,10 @@ p{
 
 
 .titre{
+  text-align:center;
   position: relative;
   font-size: 180%;
   font-weight:bold;
-  z-index: =2;
 }
 
 
