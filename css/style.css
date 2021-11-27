@@ -5,8 +5,8 @@
 nav{
   text-align: center;
   width: 100%;
-  background-color:greenyellow ;
-  font-size:150%;
+  background-color:goldenrod ;
+  font-size:160%;
 }
 
 header{
@@ -35,6 +35,7 @@ p{
 }
 
 .navig{
+  color: black;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
