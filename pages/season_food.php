@@ -17,6 +17,9 @@
       document.getElementById("mySidebar").style.width = "0";
       document.getElementById("main").style.marginLeft= "0";
     }
+    function jan(){
+      <?php echo $_SESSION['month']; ?> = 0;
+    }
   </script>
 </head>
 
@@ -29,15 +32,11 @@
   </header>
 
   <div id="main">
-    <button class="openbtn" onclick="openNav()">☰ Ouvrir barre de navigation</button>
-    <?php
-      $month = $_SESSION['month'];
-      echo'<p>'.$_SESSION['month'].'</p>';
-
-      $fh = fopen("../seasons/saisons.txt", 'r');
+    $month = (int)date("m")-1;
+    $fh = fopen("../seasons/saisons.txt", 'r');
+    $line = fgets($fh);
+    for ($x = 0; $x < $month; $x++)
       $line = fgets($fh);
-      for ($x = 0; $x < $month; $x++)
-        $line = fgets($fh);
 
       $vegetables = [];
       $i = 0;
@@ -75,9 +74,10 @@
         }
 ?>
 </div>
-<div id="mySidebar" class="sidebar">
+  
+<!--<div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a onclick="closeNav()" href="season_food.php?$_SESSION['month']=0">Janvier</a>
+    <a onclick="closeNav()" href="javascript:update()">Janvier</a>
     <a onclick="closeNav()" href="">Fevrier</a>
     <a onclick="closeNav()" href="">Mars</a>
     <a onclick="closeNav()" href="">Avril</a>
@@ -89,5 +89,6 @@
     <a onclick="closeNav()" href="">Octobre</a>
     <a onclick="closeNav()" href="">Novembre</a>
     <a onclick="closeNav()" href="">Décembre</a>
-</div>
+</div>-->
+<div></div>
 </body>
