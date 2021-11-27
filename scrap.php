@@ -1,12 +1,9 @@
 <?php
-/*
-    get_info.php
 
-    MediaWiki API Demos
-    Demo of `Info` module: Send a GET request to display information about a page.
-
-    MIT License
-*/
+$vegetables = [
+    "d'aubergine",
+    "de carotte"
+];
 
 $endPoint = "https://fr.wikibooks.org/w/api.php";
 $params = [
@@ -28,6 +25,30 @@ curl_close( $ch );
 $result = json_decode( $output, true );
 
 foreach( $result["query"]["categorymembers"] as $page ) {
-    //echo( $page["title"] . "<br>" );
-    echo '<a href="https://fr.wikibooks.org/wiki/'.$page["title"] . '"> '.$page["title"] .'  </a> <br>';
+    foreach ( $vegetables as $v) {
+        if ( "Catégorie:Recettes de cuisine à base " . $v == $page["title"]) {
+            //echo '<a href="https://fr.wikibooks.org/wiki/' . $page["title"] . '"> ' . $page["title"] . '  </a> <br>';
+            $recipes = [
+                "action" => "query",
+                "format" => "json",
+                "list" => "categorymembers",
+                "cmtitle" => $page["title"],
+                "cmtype" => "page",
+                "cmlimit" => "max",
+            ];
+
+            $url = $endPoint . "?" . http_build_query( $recipes );
+
+            $ch = curl_init( $url );
+            curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+            $output = curl_exec( $ch );
+            curl_close( $ch );
+
+            $recipesJson = json_decode( $output, true );
+
+            foreach ( $recipesJson["query"]["categorymembers"] as $recipe ) {
+                echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . $recipe["title"] . '  </a> <br>';
+            }
+        }
+    }
 }
