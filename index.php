@@ -18,8 +18,8 @@ if (isset($_GET['logout']))
 <body>
   <header>
     <h1>
-      <img class="wallpaper" src="IMG\img_legume.jpg">
         <span class="titre">Dokini</span>
+        <img class="logo" src="\IMG\ebauche_logo.jpg">
     </h1>
   </header>
 
@@ -37,8 +37,6 @@ if (isset($_GET['logout']))
     }
     ?><a class="navig" href='www.google.com'> Premium </a>
   </nav>
-
-<img class="logo" src="\IMG\ebauche_logo.jpg">
 
   <h2>Dokini, c'est quoi?</h2>
     <p>
