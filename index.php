@@ -9,7 +9,7 @@ if (isset($_GET['logout']))
 
 <html lang="fr">
 <head>
-    <title>Dokini</title>
+    <title class="titre">Dokini</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -18,9 +18,8 @@ if (isset($_GET['logout']))
 <body>
   <header>
     <h1>
-
+        <span class="titre">Dokini</span>
         <img class="logo" src="\IMG\ebauche_logo.jpg">
-        Dokini
     </h1>
   </header>
 
@@ -36,7 +35,7 @@ if (isset($_GET['logout']))
         echo '<a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
         <a class="navig" href= ?logout=true> Deconnexion</a>';
     }
-    ?><a href='www.google.com'> Premium </a>
+    ?><a class="navig" href='www.google.com'> Premium </a>
   </nav>
 
   <h2>Dokini, c'est quoi?</h2>
@@ -44,7 +43,6 @@ if (isset($_GET['logout']))
       Dokini est un site web développé par des étudiants pour permettre de manger
       mieux tout en préservant l'environnement.
     </p>
-    <br />
 
     <p>
       Dokini vous propose diverses recettes selon vos goûts et vos besoins.

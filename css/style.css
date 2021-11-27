@@ -1,34 +1,49 @@
 ﻿body{
- background:repeating-linear-gradient(90deg, darkslateblue, midnightblue 100%);
+ background-color: darkslateblue;
 }
 
 nav{
   text-align: center;
   width: 100%;
-  background-color:goldenrod ;
   font-size:160%;
+  background-color: khaki;
 }
 
 header{
-  padding:10px;
+  padding:5px;
+  text-align:center;
+}
+
+h2{
   text-align:center;
 }
 
 p{
-  font-size:150%;
+  color: khaki;
+  font-size: 110%;
+  text-align:center;
 }
 
-h2{
-  font-size: 160%;
-  text-decoration:underline;
+
+.titre{
+  position: relative;
+  font-size: 180%;
+  font-weight:bold;
+  z-index: =2;
 }
 
+.wallpaper{
+  position: absolute;
+  z-index: =1;
+  background-attachment: local;
+  height: 200px;
+  width:auto;
+}
 
 .logo{
-  width: 70px;
-  max-width: 100%;
-	height: auto;
-  float:right;
+  height: 90px;
+  width: auto;
+  float: right;
 }
 
 .navig{
@@ -37,9 +52,6 @@ h2{
   margin-right: auto;
   margin-left: auto;
   width: 16%;
+  color: black;
   text-decoration:none;
-}
-
-.i{
-  font-style:italic;
 }
