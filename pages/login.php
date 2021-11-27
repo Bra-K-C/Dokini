@@ -1,12 +1,10 @@
 <form id="form" method="post" action="" name="login-form">
     <div>
         <div>
-            <label>Username</label>
-            <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+            <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
         </div>
         <div class="form-element">
-            <label>Password</label>
-            <input type="password" name="password" required />
+            <input type="password" name="password" placeholder="Password" required />
         </div>
         <button type="submit" name="login" value="login">Login</button>
         <form> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
