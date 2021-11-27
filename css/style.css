@@ -5,7 +5,6 @@
 nav{
   text-align: center;
   width: 100%;
-  background-color:goldenrod ;
   font-size:160%;
 }
 
@@ -22,14 +21,18 @@ p{
 
 
 .titre{
+  position: absolute;
   font-size: 200%;
   font-weight:bold;
   z-index: =2;
 }
 
 .wallpaper{
+  position: absolute;
   z-index: =1;
   background-attachment: local;
+  height: 50%;
+  width:auto;
 }
 
 .logo{

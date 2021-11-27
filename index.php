@@ -35,7 +35,7 @@ if (isset($_GET['logout']))
         echo '<a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
         <a class="navig" href= ?logout=true> Deconnexion</a>';
     }
-    ?><a href='www.google.com'> Premium </a>
+    ?><a class="navig" href='www.google.com'> Premium </a>
   </nav>
 
 <img class="logo" src="\IMG\ebauche_logo.jpg">
