@@ -45,7 +45,4 @@ if (isset($_GET['logout']))
       vous proposer des recettes adaptées à vos goûts et vos besoins. Et tout
       cela en préservant l'environnement.
     </p>
-    <p class = "abo">
-      <a class="navig" href='www.google.com'> Premium </a>
-    </p>
 </body>
