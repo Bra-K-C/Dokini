@@ -19,6 +19,7 @@ header{
 .logo{
   width: 30%;
   height: auto;
+  float: right;
 }
 
 .navig{
