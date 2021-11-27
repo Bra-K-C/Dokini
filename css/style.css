@@ -1,11 +1,11 @@
 ﻿body{
- background:repeating-linear-gradient(90deg, blue, yellow 100%);
+ background:repeating-linear-gradient(90deg, darkslateblue, midnightblue 100%);
 }
 
 nav{
   text-align: center;
   width: 100%;
-  background-color:deepskyblue;
+  background-color:gold ;
   font-size:160%;
 }
 
@@ -27,15 +27,17 @@ h4{
   font-size:130%;
 }
 
-img{
-  float:left;
-}
-
 h2{
   font-size: 160%;
   text-decoration:underline;
 }
 
+
+.logo{
+  width: 30px;
+	height: 30px;
+  float:left;
+}
 
 .navig{
   display: inline-block;
@@ -43,7 +45,6 @@ h2{
   margin-left: auto;
   width: 16%;
   text-decoration:none;
-  color:darkblue;
   font-weight:bold;
 }
 
