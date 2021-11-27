@@ -18,8 +18,6 @@ if (isset($_GET['logout']))
 <body>
   <header>
     <h1>
-
-        <img class="logo" src="\IMG\ebauche_logo.jpg">
         Dokini
     </h1>
   </header>
