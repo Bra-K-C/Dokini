@@ -1,5 +1,5 @@
 ﻿body{
- background:repeating-linear-gradient(darkslateblue, midnightblue);
+ background: repeating-linear-gradient(45deg, midnightblue, darkslateblue 100%);
 }
 
 nav{
@@ -10,14 +10,13 @@ nav{
 }
 
 header{
-  text width: 50%;
-  padding:10px;
+  padding:5px;
   text-align:center;
 }
 
 
 .logo{
-  height: 70px;
+  height: 65px;
   width: auto;
   float: right;
 }
