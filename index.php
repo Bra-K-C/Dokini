@@ -24,6 +24,8 @@ if (isset($_GET['logout']))
   </header>
 
   <nav>
+    <a class="navig2" href="pages/season_full.php">Fruits et légumes de saison</a>
+    <a class="navig" href="pages/scrap.php">Repas</a>
     <?php
     session_start();
     if(!utils::IsConnected()){
@@ -39,10 +41,22 @@ if (isset($_GET['logout']))
   </nav>
 
   <br />
-  <h2>Dokini, c'est quoi?</h2>
-    <p class = "texteG">
-      Le but de Dokini est de mieux connaître votre niveau actuel pour pouvoir
-      vous proposer des recettes adaptées à vos goûts et vos besoins. Et tout
-      cela en préservant l'environnement.
-    </p>
+  <br />
+  <br />
+  <p>
+    Utiliser Dokini, c'est permettre aux enfants de manger mieux tout en
+    préservant l'environnement. Ce site a pour but d'aider les mairies à
+    répondre aux "casses-têtes" des repas pour les cantines en leur proposant
+    une liste de repas réalisés à base de produits de saison.
+  </p>
+  <p>
+    Vous pouvez créer un compte en cliquant sur "Connexion". Cela vous permet
+    d'avoir accès aux propositions de repas. En effet, Dokini va vous proposer
+    une liste de repas pour la semaine en fonction du nombre d'enfants et de
+    leur âge. Tout cela avec des produits de saisons et un nombre de kcal adapté
+    pour chaque tranche d'âge.
+  </p>
+  <br />
+  <br />
+  <br />
 </body>

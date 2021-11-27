@@ -1,9 +1,49 @@
 ﻿body{
- background-color: darkslateblue;
+ background-color: papayawhip;
+}
+
+header{
+  text-align: center;
+  background-color: RGB(144,183,54);
+}
+
+nav{
+  text-align: center;
+  width: 100%;
+}
+
+p{
+  font-size: 150%;
+  text-align: center;
 }
 
 .titre{
-  font-size: 180%;
+  font-size: 250%;
   font-weight:bold;
-  z-index: =2;
 }
+
+.wallpaper{
+  width: 100%;
+}
+
+.navig{
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+  text-decoration:none;
+  color:black;
+  font-size: 225%;
+}
+
+.navig2{
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 38%;
+  text-decoration:none;
+  color:black;
+  font-size: 225%;
+}
+
+.grass
