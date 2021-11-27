@@ -2,7 +2,7 @@
 
 $month = localtime()["4"];
 
-$fh = fopen('saisons.txt', 'r');
+$fh = fopen("saisons.txt", 'r');
 $line = fget($fh);
 for ($x = 0; $x < $month; $x++)
     $line = fgets($fh);
