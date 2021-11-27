@@ -19,7 +19,7 @@ if (isset($_GET['logout']))
   <header>
     <h1>
       <img class="wallpaper" src="IMG\img_legume.jpg">
-        Dokini
+        <span class="titre">Dokini</span>
     </h1>
   </header>
 

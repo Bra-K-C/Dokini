@@ -24,9 +24,11 @@ p{
 .titre{
   font-size: 200%;
   font-weight:bold;
+  z-index: =2;
 }
 
 .wallpaper{
+  z-index: =1;
   background-attachment: local;
 }
 
