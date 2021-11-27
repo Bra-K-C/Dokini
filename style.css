@@ -9,6 +9,12 @@ nav{
   font-size:160%;
 }
 
+header{
+  background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+  padding:5px;
+  text-align:center;
+}
+
 p{
   font-size:120%;
 }
@@ -31,10 +37,6 @@ h2{
   text-decoration:underline;
 }
 
-
-.red{
-  background_color:red;
-}
 
 .navig{
   display: inline-block;
