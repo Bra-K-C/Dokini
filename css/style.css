@@ -10,7 +10,6 @@ header{
 
 nav{
   text-align: center;
-  width: 100%;
   font-size:160%;
 }
 
@@ -23,8 +22,8 @@ h2{
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
-  font-size:large;
   text-decoration:none;
+  font-size: 120%;
 }
 
 .titre{
