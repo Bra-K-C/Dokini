@@ -1,5 +1,20 @@
 body {
     font-family: "Lato", sans-serif;
+    background-color:papayawhip;
+}
+
+header{
+  text-align: center;
+  background-color: red;
+}
+
+.titre{
+  font-size: 180%;
+  font-weight:bold;
+
+    
+.wallpaper{
+  width: 100%;
 }
 
 .sidebar {
