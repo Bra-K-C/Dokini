@@ -43,8 +43,9 @@ p{
 .logo{
   height: 90px;
   width: auto;
-  float: right;
   position: absolute;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .navig{
