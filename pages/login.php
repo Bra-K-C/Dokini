@@ -5,26 +5,26 @@
     <title class="titre">Connexion</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="\ccs\bootstrap.min.css" />
-    <link rel="stylesheet" href="\ccs\style.css" />
+    <link rel="stylesheet" href="\ccs\styleLogin.css" />
 </head>
 
 <body>
   <header>
     <h1>
-      <img class="wallpaper" src="\IMG\mairie.jpg">
-      <span class="titre">Dokini</span>
+      <img class="wallpaper" src="\IMG\ecole.jpg">
+      <span class="titre">Connexion</span>
     </h1>
   </header>
 
-  <form id="form" method="post" action="" name="login-form">
+  <form method="post" action="" name="login-form">
     <div>
-      <div>
+      <div class="bout">
         <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
-      </div>
-      <div>
         <input type="password" name="password" placeholder="Password" required />
-      </div>
+        <br />
         <button type="submit" name="login" value="login">Login</button>
+      </div>
+      <br />
       <form> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
     </div>
   </form>
