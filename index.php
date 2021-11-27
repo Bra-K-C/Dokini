@@ -46,8 +46,4 @@ if (isset($_GET['logout']))
       protégeant l'environnement en vous soumettant des recettes qui utilisent
       des produits de saison.</spend>
     </p>
-    <p>
-      <a class="abo" href='www.google.com'> Premium </a>
-    </p>
-
 </body>

@@ -36,9 +36,9 @@ p{
 .logo{
   height: 90px;
   width: auto;
-  position: relative;
-  margin-right: 0;
-  margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .navig{
