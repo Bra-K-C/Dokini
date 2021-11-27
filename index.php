@@ -41,8 +41,10 @@ if (isset($_GET['logout']))
   <br />
   <h2>Dokini, c'est quoi?</h2>
     <p>
-      Dokini est un site web développé par des étudiants poru vous permettre
-      d'évaluer vos conditions phyisiques
+      Dokini est un site web, développé par des étudiants. Le but est de mieux
+      connaître votre niveau actuel pour pouvoir 
+      Dokini vous permet de connaître votre niveau actuel et d'atteindre des
+      objectifs en fonction de vos besoins et de vos envies.
     </p>
 
     <p>
