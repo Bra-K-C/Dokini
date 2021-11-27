@@ -2,16 +2,16 @@
  background-color: darkslateblue;
 }
 
+header{
+  padding:5px;
+  text-align:center;
+  background-color: khaki;
+}
+
 nav{
   text-align: center;
   width: 100%;
   font-size:160%;
-  background-color: khaki;
-}
-
-header{
-  padding:5px;
-  text-align:center;
 }
 
 h2{
