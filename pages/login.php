@@ -4,14 +4,14 @@
 <head>
     <title class="titre">Connexion</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="ccs/bootstrap.min.css" />
-    <link rel="stylesheet" href="ccs/style.css" />
+    <link rel="stylesheet" href="\ccs\bootstrap.min.css" />
+    <link rel="stylesheet" href="\ccs\style.css" />
 </head>
 
 <body>
   <header>
     <h1>
-      <img class="wallpaper" src="\IMG\cantine.jpg">
+      <img class="wallpaper" src="\IMG\mairie.jpg">
       <span class="titre">Dokini</span>
     </h1>
   </header>
@@ -28,7 +28,7 @@
       <form> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
     </div>
   </form>
-  
+
 </body>
 
 <?php
