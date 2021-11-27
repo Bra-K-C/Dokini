@@ -1,0 +1,61 @@
+﻿body{
+ background:repeating-linear-gradient( to right bottom, darkblue, yellow 0%);
+}
+
+nav{
+  text-align: center;
+  width: 100%;
+  background-color:deepskyblue;
+  font-size:160%;
+}
+
+header{
+  padding:10px;
+  text-align:center;
+}
+
+p{
+  font-size:120%;
+}
+
+ul{
+  font-size:120%;
+}
+
+h4{
+  font-style:italic;
+  font-size:130%;
+}
+
+img{
+  float:left;
+}
+
+h2{
+  font-size: 160%;
+  text-decoration:underline;
+}
+
+
+.navig{
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 16%;
+  text-decoration:none;
+  color:darkblue;
+  font-weight:bold;
+}
+
+.i{
+  font-style:italic;
+}
+
+.exemple{
+  color:limegreen;
+  font-size:120%;
+}
+
+.s{
+  text-decoration:underline;
+}
