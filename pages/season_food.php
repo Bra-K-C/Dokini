@@ -49,7 +49,7 @@
           $isWord = !$isWord;
           if ($str !== ""){
             array_push($vegetables, $str);
-            echo'<p>Nutriment : '.$str.'</p>';
+            echo'<p>Aliment : '.$str.'</p>';
             $isLabel = !$isLabel;
           }
           $str = "";
@@ -74,7 +74,7 @@
         }
 ?>
 </div>
-  
+
 <!--<div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a onclick="closeNav()" href="javascript:update()">Janvier</a>
