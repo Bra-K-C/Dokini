@@ -5,24 +5,21 @@
 nav{
   text-align: center;
   width: 100%;
-  background-color:gold ;
+  background-color:khaki ;
   font-size:150%;
 }
 
 header{
   padding:5px;
   text-align:center;
-}
-
-
-p{
-  color: lightseagreen;
-  font-size: 110%;
-}
-
-.titre{
   font-size: 160%;
   font-weight:bold;
+}
+
+p{
+  color: khaki;
+  font-size: 110%;
+  text-align:center;
 }
 
 
