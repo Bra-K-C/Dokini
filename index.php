@@ -11,15 +11,15 @@ if (isset($_GET['logout']))
 <head>
     <title class="titre">Dokini</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="ccs/bootstrap.min.css" />
+    <link rel="stylesheet" href="ccs/style.css" />
 </head>
 
 <body>
   <header>
     <h1>
         <span class="titre">Dokini</span>
-        <img class="logo" src="\IMG\ebauche_logo.jpg">
+        <img class="wallpaper" src="\IMG\acceuil.jpg">
     </h1>
   </header>
 
@@ -37,13 +37,4 @@ if (isset($_GET['logout']))
     }
     ?>
   </nav>
-
-  <br />
-  <h2 class="soustitre">Dokini, c'est quoi?</h2>
-    <p>
-      <spend class="texteD">Le but de Dokini est de mieux connaître votre niveau actuel pour pouvoir
-      vous proposer des repas adaptés à vos besoins et vos envies. Tout cela en
-      protégeant l'environnement en vous soumettant des recettes qui utilisent
-      des produits de saison.</spend>
-    </p>
 </body>
