@@ -34,6 +34,8 @@ CREATE TABLE `saison_product` (
   `local` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+
 -- --------------------------------------------------------
 
 --
