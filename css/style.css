@@ -5,7 +5,7 @@
 nav{
   text-align: center;
   width: 100%;
-  background:repeating-linear-gradient(yellow, blue 100%);
+  background:repeating-linear-gradient(to left,yellow, blue 100%);
   font-size:160%;
 }
 
