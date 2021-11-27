@@ -11,7 +11,6 @@
 <body>
   <header>
     <h1>
-      <img class="wallpaper" src="\IMG\ecole.jpg">
       <span class="titre">Connexion</span>
     </h1>
   </header>
