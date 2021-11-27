@@ -102,13 +102,15 @@ foreach( $result["query"]["categorymembers"] as $page ) {
                     }
                 }
                 if (!$alReadyDisplay && substr($recipe["title"], 0, 17) == "Livre de cuisine/")
-                    echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . $recipe["title"] . '  </a> <br>';
+                    echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . substr($recipe["title"], 17) . '  </a> <br>';
                 array_push($allRecipes, $recipe);
             }
         }
     }
 
 }
+
+echo "<br>";
 
     $endPoint = "https://fr.wikibooks.org/w/api.php";
     $params = [
@@ -163,7 +165,7 @@ foreach( $result["query"]["categorymembers"] as $page ) {
                         }
                     }
                     if (!$alReadyDisplay && substr($recipe["title"], 0, 17) === "Livre de cuisine/" && substr($recipe["title"], 17, 9) !== "Boissons/")
-                        echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . $recipe["title"] . '  </a> <br>';
+                        echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . substr($recipe["title"], 17) . '  </a> <br>';
                     array_push($allRecipes, $recipe);
                 }
             }
