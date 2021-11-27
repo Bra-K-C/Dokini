@@ -62,6 +62,8 @@
           if ($c === ',') {
               if ($lab !== "") {
                   array_push($vegetables, $str);
+                  if($lab === " 1")  $lab = "Oui";
+                  else  $lab = "Non";
                   echo'<p>Aliment : ' . $str . ', Local : ' . $lab . '</p>';
                   $c = '\'';
                   $isLabel = !$isLabel;
