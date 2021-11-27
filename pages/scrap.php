@@ -1,6 +1,6 @@
 <?php
 
-$endPoint = "https://fr.wikibooks.org/w/api.php";
+/*$endPoint = "https://fr.wikibooks.org/w/api.php";
 $params = [
     "action" => "parse",
     "format" => "json",
@@ -20,7 +20,7 @@ $fh = fopen("test.txt", 'w');
 fwrite($fh, $result["parse"]["text"]["*"]);
 echo $result["parse"]["text"]["*"];
 
-echo "<br><br>";
+echo "<br><br>";*/
 
 $month = localtime()["4"];
 
