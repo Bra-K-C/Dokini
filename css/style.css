@@ -1,11 +1,11 @@
 ﻿body{
- background:repeating-linear-gradient(90deg, blue, yellow 100%);
+ background:repeating-linear-gradient(90deg, darkblue, gold 100%);
 }
 
 nav{
   text-align: center;
   width: 100%;
-  background:repeating-linear-gradient(to left,yellow, blue 100%);
+  background:repeating-linear-gradient(to right,gold, darkblue 100%);
   font-size:160%;
 }
 
