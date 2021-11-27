@@ -43,7 +43,7 @@ p{
 .logo{
   height: 90px;
   width: auto;
-  position: absolute;
+  position: sticky;
   margin-right: 0;
   margin-left: auto;
 }
