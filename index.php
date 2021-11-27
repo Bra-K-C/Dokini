@@ -10,10 +10,7 @@
 
 <body>
 <nav class="menu" style="height: 60px;">
-    <div class="titre">
         <h1><img src="\IMG\ebauche_logo.jpg" align="left"  class="logo">  &nbsp  Dokini</h1>
-
-    </div>
     <ul class="links">
 
             <li>
