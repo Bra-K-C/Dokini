@@ -36,9 +36,9 @@ p{
 .logo{
   height: 90px;
   width: auto;
-  position: relative;
-  margin-right: 0;
-  margin-left: auto;
+  position: absolute;
+  top:0;
+  right: 0;
 }
 
 .navig{
@@ -51,7 +51,7 @@ p{
 }
 
 .texteD{
-  position: static;
+  text-align:center;
 }
 
 .abo{
@@ -59,4 +59,5 @@ p{
   text-decoration:none;
   position: fixed;
   margin-left: 50px;
+  width: 16%;
 }

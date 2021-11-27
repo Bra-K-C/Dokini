@@ -41,10 +41,9 @@ if (isset($_GET['logout']))
   <br />
   <h2>Dokini, c'est quoi?</h2>
     <p class = "texteG">
-      Dokini est un site web, développé par des étudiants. Le but est de mieux
-      connaître votre niveau actuel pour pouvoir
-      Dokini vous permet de connaître votre niveau actuel et d'atteindre des
-      objectifs en fonction de vos besoins et de vos envies.
+      Le but de Dokini est de mieux connaître votre niveau actuel pour pouvoir
+      vous proposer des recettes adaptées à vos goûts et vos besoins. Et tout
+      cela en préservant l'environnement.
     </p>
     <p class = "abo">
       <a class="navig" href='www.google.com'> Premium </a>
