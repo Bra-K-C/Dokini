@@ -43,7 +43,6 @@ if (isset($_GET['logout']))
       Dokini est un site web développé par des étudiants pour permettre de manger
       mieux tout en préservant l'environnement.
     </p>
-    <br />
 
     <p>
       Dokini vous propose diverses recettes selon vos goûts et vos besoins.
