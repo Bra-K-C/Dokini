@@ -36,7 +36,7 @@ p{
 .logo{
   height: 90px;
   width: auto;
-  position: absolute;
+  position: fixed;
   top:0px;
   right: 0px;
 }
