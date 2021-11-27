@@ -41,9 +41,10 @@ p{
 }
 
 .logo{
-  height: 85px;
+  height: 90px;
   width: auto;
   float: right;
+  position: absolute;
 }
 
 .navig{
