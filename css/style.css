@@ -28,7 +28,6 @@ p{
 }
 
 .wallpaper{
-  position: absolute;
   z-index: =1;
   background-attachment: local;
   height: 50%;
