@@ -10,6 +10,7 @@ nav{
 }
 
 header{
+  text width: 50%;
   padding:10px;
   text-align:center;
 }
@@ -18,7 +19,6 @@ header{
 .logo{
   width: 30%;
   height: auto;
-  float:right;
 }
 
 .navig{
