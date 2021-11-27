@@ -35,6 +35,7 @@ CREATE TABLE `saison_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
+<<<<<<< HEAD
 INSERT INTO saison_product (name, saison, tag, local) VALUES
 ('Fraise', '[4, 5, 6]', 'fr', 1),
 ('Pomme', '[0, 1, 2, 3, 7, 8, 9, 10, 11]', 'fr', 1),
@@ -113,6 +114,8 @@ INSERT INTO saison_product (name, saison, tag, local) VALUES
 ('Kaki','[0, 9, 10, 11]', 'fr', 0),
 ('Noix de coco', '[0, 1, 10, 11]', 'fr', 0),
 ('Pastèque', '[5, 6, 7, 8]', 'fr', 0);
+=======
+>>>>>>> 93d76305953ee248adcbad8984a08da99db022c6
 
 -- --------------------------------------------------------
 
