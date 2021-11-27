@@ -18,26 +18,20 @@ h2{
   text-align:center;
 }
 
-p{
-  color: khaki;
-  font-size: 110%;
-  text-align:center;
+.navig{
+  color: black;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  font-size:large;
+  text-decoration:none;
 }
-
 
 .titre{
   position: relative;
   font-size: 180%;
   font-weight:bold;
   z-index: =2;
-}
-
-.wallpaper{
-  position: absolute;
-  z-index: =1;
-  background-attachment: local;
-  height: 200px;
-  width:auto;
 }
 
 .logo{
@@ -48,11 +42,7 @@ p{
   top: 0;
 }
 
-.navig{
-  color: black;
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 16%;
-  text-decoration:none;
+.texteG{
+  position:fixed;
+  left: 40px;
 }
