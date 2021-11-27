@@ -1,5 +1,12 @@
 
 <!DOCTYPE html>
+
+<?php
+include 'utils/utils.php';
+if (isset($_GET['logout']))
+    utils::DeleteAllCookies();
+?>
+
 <html lang="fr">
 <head>
     <title>Dokini</title>
@@ -11,14 +18,25 @@
 <body>
   <header>
     <h1>
+
         <img class="logo" src="\IMG\ebauche_logo.jpg">
         Dokini
     </h1>
   </header>
 
   <nav>
-    <a class="navig" href="pages/login.php">Connexion</a>
-    <a class="navig" href="pages/register.php"> Inscription</a>
+    <?php
+    session_start();
+    if(!utils::IsConnected()){
+        echo'<a class="navig" href="pages/login.php">Connexion</a>
+        <a class="navig" href="pages/register.php"> Inscription</a>';
+    }
+    else{
+        $profil_link = 'pages/profil.php?id='.$_SESSION["user_id"];
+        echo '<a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
+        <a class="navig" href= ?logout=true> Deconnexion</a>';
+    }
+    ?>
   </nav>
 
   <h2>Dokini, c'est quoi?</h2>
