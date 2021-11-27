@@ -11,8 +11,8 @@ header{
 .titre{
   font-size: 180%;
   font-weight:bold;
+}
 
-    
 .wallpaper{
   width: 100%;
 }
@@ -73,4 +73,13 @@ header{
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
+}
+
+#main{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#main > .aliment{
+  flex-basis: 25%;
 }

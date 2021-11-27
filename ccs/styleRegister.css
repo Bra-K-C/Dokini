@@ -4,17 +4,13 @@ body{
 
 header{
   text-align: center;
-  background-color: RGB(199,121,99);
+  background-color: RGB(144,183,54);
 }
 
 
 .titre{
   font-size: 180%;
   font-weight:bold;
-}
-
-.wallpaper{
-  width: 100%;
 }
 
 .bout{

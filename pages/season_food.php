@@ -33,41 +33,49 @@
   </header>
   <div id="main">
    <?php
-            $month = (int)date("m")-1;
+        $month = (int)date("m")-1;
 
-      $vegetables = [];
-      $i = 0;
-      $c = $line[$i];
-      $isWord = false;
-      $isLabel = false;
-      $str = "";
-      while ($c !== ']') {
-        if ($c === '\'') {
-          $isWord = !$isWord;
-          if ($str !== ""){
-            array_push($vegetables, $str);
-            echo'<p>Aliment : '.$str.'</p>';
-            $isLabel = !$isLabel;
-          }
-          $str = "";
-        }
-        if ($isWord && $line[$i] !== '\'') {
-          $str .= $c;
-        }
-        if ($c === ',') {
-          if ($str !== "") {
-            array_push($vegetables, $str);
-            echo '<p>Local : ' . $str .'</p>';
-            $c = '\'';
-            $isLabel = !$isLabel;
-          }
-          $str = "";
-        }
-        if ($isLabel && $line[$i] !== ',' && $c !== '\'') {
-          $str .= $c;
-        }
-        $i++;
+        $fh = fopen("../seasons/saisons.txt", 'r');
+        $line = fgets($fh);
+        for ($x = 0; $x < $month; $x++)
+           $line = fgets($fh);
+
+        $vegetables = [];
+        $i = 0;
         $c = $line[$i];
+        $isWord = false;
+        $isLabel = false;
+        $str = "";
+        $lab = "";
+        while ($c !== ']') {
+          if ($c === '\'') {
+              $isWord = !$isWord;
+              if ($str !== "") {
+                  array_push($vegetables, $str);
+
+                  $isLabel = !$isLabel;
+              }
+          }
+          if ($isWord && $line[$i] !== '\'') {
+              $str .= $c;
+          }
+          if ($c === ',') {
+              if ($lab !== "") {
+                  array_push($vegetables, $str);
+                  if($lab === " 1")  $lab = "Oui";
+                  else  $lab = "Non";
+                  echo'<p class="aliment"><strong>Aliment</strong> : ' . $str . ', <strong>Local</strong> : ' . $lab . '</p>';
+                  $c = '\'';
+                  $isLabel = !$isLabel;
+                  $str = "";
+                  $lab = "";
+              }
+          }
+          if ($isLabel && $line[$i] !== ',' && $c !== '\'') {
+              $lab .= $c;
+          }
+          $i++;
+          $c = $line[$i];
         }
 ?>
 </div>
