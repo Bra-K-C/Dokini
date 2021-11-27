@@ -74,3 +74,12 @@ header{
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
 }
+
+#main{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#main > .aliment{
+  flex-basis: 25%;
+}
