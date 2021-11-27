@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php session_start()?>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +24,7 @@
     <h2>Fruits et légumes de saisons</h2>
 <?php
             $month = $_SESSION['month'];
+            echo'<p>'.$_SESSION['month'].'</p>';
 
             $fh = fopen("../seasons/saisons.txt", 'r');
             $line = fgets($fh);

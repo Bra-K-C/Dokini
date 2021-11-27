@@ -59,6 +59,7 @@ if (isset($_POST['register'])) {
                 echo '<p class="success">Enregistrement réussi!</p>';
                 $_SESSION['user_id'] = $id;
                 $_SESSION['username'] = $username;
+                $_SESSION['month'] = (int)date("m")-1;
                 header("Location: /");
             } else {
                 echo '<p class="error">Erreur</p>';
