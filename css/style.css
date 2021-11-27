@@ -1,5 +1,5 @@
 ﻿body{
- background: linear-gradient(to left top, blue, red);
+ background: linear-gradient(45deg, blue, red);
 }
 
 nav{
@@ -29,8 +29,4 @@ header{
   color: black;
   text-decoration:none;
   font-weight:bold;
-}
-
-.i{
-  font-style:italic;
 }
