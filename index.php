@@ -9,7 +9,7 @@ if (isset($_GET['logout']))
 
 <html lang="fr">
 <head>
-    <title>Dokini</title>
+    <title class="titre">Dokini</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -38,6 +38,8 @@ if (isset($_GET['logout']))
     }
     ?><a href='www.google.com'> Premium </a>
   </nav>
+
+<img class="logo" src="\IMG\ebauche_logo.jpg">
 
   <h2>Dokini, c'est quoi?</h2>
     <p>
