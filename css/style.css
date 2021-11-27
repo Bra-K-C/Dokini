@@ -15,16 +15,7 @@ header{
 }
 
 p{
-  font-size:120%;
-}
-
-ul{
-  font-size:120%;
-}
-
-h4{
-  font-style:italic;
-  font-size:130%;
+  font-size:150%;
 }
 
 h2{
@@ -34,30 +25,21 @@ h2{
 
 
 .logo{
-  width: 60px;
+  width: 70px;
   max-width: 100%;
 	height: auto;
-  float:left;
+  float:right;
 }
 
 .navig{
+  color: black;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
   width: 16%;
   text-decoration:none;
-  font-weight:bold;
 }
 
 .i{
   font-style:italic;
-}
-
-.exemple{
-  color:limegreen;
-  font-size:120%;
-}
-
-.s{
-  text-decoration:underline;
 }
