@@ -27,16 +27,16 @@ h4{
   font-size:130%;
 }
 
-img{
-  max-width: 10%;
-  float:left;
-}
-
 h2{
   font-size: 160%;
   text-decoration:underline;
 }
 
+
+.logo{
+  max-width: 5%;
+  float:left;
+}
 
 .navig{
   display: inline-block;
