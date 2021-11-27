@@ -1,5 +1,5 @@
 ﻿body{
- background:repeating-linear-gradient( 45deg, blue, yellow);
+ background:repeating-linear-gradient(to left down, 90deg, blue, yellow);
 }
 
 nav{
