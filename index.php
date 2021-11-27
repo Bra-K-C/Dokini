@@ -41,8 +41,8 @@ if (isset($_GET['logout']))
   <br />
   <h2>Dokini, c'est quoi?</h2>
     <p>
-      Dokini est un site web développé par des étudiants pour permettre de manger
-      mieux tout en préservant l'environnement.
+      Dokini est un site web développé par des étudiants poru vous permettre
+      d'évaluer vos conditions phyisiques
     </p>
 
     <p>
