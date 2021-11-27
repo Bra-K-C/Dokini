@@ -1,5 +1,5 @@
 ﻿body{
- background:repeating-linear-gradient(90deg, blue, yellow 100%);
+ background:repeating-linear-gradient(darkblue, yellow 100%);
 }
 
 nav{
@@ -10,7 +10,7 @@ nav{
 }
 
 header{
-  padding:10px;
+  
   text-align:center;
 }
 
@@ -28,7 +28,7 @@ h4{
 }
 
 img{
-  max-width: 100%;
+  float:left;
 }
 
 h2{
