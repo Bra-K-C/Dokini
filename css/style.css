@@ -12,8 +12,6 @@ nav{
   text-align: center;
   width: 100%;
   font-size:160%;
-  text-decoration:none;
-  color: black;
 }
 
 h2{
@@ -56,4 +54,5 @@ p{
   margin-right: auto;
   margin-left: auto;
   width: 16%;
+  text-decoration:none;
 }

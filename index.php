@@ -32,7 +32,7 @@ if (isset($_GET['logout']))
     }
     else{
         $profil_link = 'pages/profil.php?id='.$_SESSION["user_id"];
-        echo '<a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
+        echo '<a class="navig" href='.$profil_link.' >'. $_SESSION["username"].' |</a>
         <a class="navig" href= ?logout=true> Deconnexion</a>';
     }
     ?><a class="navig" href='www.google.com'> Premium </a>
