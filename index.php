@@ -11,15 +11,15 @@ if (isset($_GET['logout']))
 <head>
     <title class="titre">Dokini</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="ccs/bootstrap.min.css" />
+    <link rel="stylesheet" href="ccs/style.css" />
 </head>
 
 <body>
   <header>
     <h1>
-        <span class="titre">Dokini</span>
-        <img class="logo" src="\IMG\ebauche_logo.jpg">
+      <img class="wallpaper" src="\IMG\cantine.jpg">
+      <span class="titre">Dokini</span>
     </h1>
   </header>
 

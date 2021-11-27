@@ -1,0 +1,9 @@
+﻿body{
+ background-color: darkslateblue;
+}
+
+.titre{
+  font-size: 180%;
+  font-weight:bold;
+  z-index: =2;
+}
