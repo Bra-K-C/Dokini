@@ -1,5 +1,5 @@
 ﻿body{
- background:repeating-linear-gradient(0deg, darkslateblue, midnightblue);
+ background:repeating-linear-gradient(darkslateblue, midnightblue);
 }
 
 nav{
