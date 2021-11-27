@@ -16,7 +16,6 @@
         </div>
         <div class="form-element">
             <input type="password" name="cpassword" id="cpassword" placeholder="Confirm password" required />
-
         </div>
         <button type="submit" name="register" value="register">S'enregistrer</button>
         <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>

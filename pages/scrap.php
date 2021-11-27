@@ -1,9 +1,30 @@
 <?php
 
-$vegetables = [
-    "d'aubergine",
-    "de carotte"
-];
+$month = localtime()["4"];
+
+$fh = fopen("saisons.txt", 'r');
+$line = fget($fh);
+for ($x = 0; $x < $month; $x++)
+    $line = fgets($fh);
+
+$vegetables = [];
+$i = 0;
+$c = $line[$i];
+$isWord = false;
+$str = "";
+while ($c != ']') {
+    if ($c == '\'') {
+        $isWord = !$isWord;
+        if ($str != "")
+            array_push($vegetables, $str);
+        $str = "";
+    }
+    if ($isWord) {
+        $str += $c;
+    }
+    $i++;
+    $c = $line[$i];
+}
 
 $endPoint = "https://fr.wikibooks.org/w/api.php";
 $params = [
@@ -26,6 +47,10 @@ $result = json_decode( $output, true );
 
 foreach( $result["query"]["categorymembers"] as $page ) {
     foreach ( $vegetables as $v) {
+        if ($v[0] == 'a' || $v[0] == 'e' || $v[0] == 'i' || $v[0] == 'o' || $v[0] == 'u' || $v[0] == 'y')
+            $v = "d'" . $v;
+        else
+            $v = "de " . $v;
         if ( "Catégorie:Recettes de cuisine à base " . $v == $page["title"]) {
             //echo '<a href="https://fr.wikibooks.org/wiki/' . $page["title"] . '"> ' . $page["title"] . '  </a> <br>';
             $recipes = [
