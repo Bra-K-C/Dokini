@@ -3,7 +3,6 @@
 }
 
 header{
-  padding:5px;
   text-align:center;
   background-color: khaki;
 }
@@ -41,7 +40,7 @@ p{
 }
 
 .logo{
-  height: 90px;
+  height: 100px;
   width: auto;
   float: right;
 }
