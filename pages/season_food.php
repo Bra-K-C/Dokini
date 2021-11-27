@@ -23,7 +23,7 @@
 
     </script>
 </head>
-    
+
 <body>
   <header>
     <h1>
@@ -35,51 +35,43 @@
    <?php
             $month = (int)date("m")-1;
 
-            $fh = fopen("../seasons/saisons.txt", 'r');
-            $line = fgets($fh);
-            for ($x = 0; $x < $month; $x++)
-                $line = fgets($fh);
-
-            $vegetables = [];
-            $i = 0;
-            $c = $line[$i];
-            $isWord = false;
-            $isLabel = false;
-            $lab = "";
-            $str = "";
-            while ($c !== ']') {
-                if ($c === '\'') {
-                    $isWord = !$isWord;
-                    if ($str !== ""){
-                        array_push($vegetables, $str);
-                        $isLabel = !$isLabel;
-                    }
-                }
-                if ($isWord && $line[$i] !== '\'') {
-                    $str .= $c;
-                }
-                if ($c === ',') {
-                    if ($lab !== "") {
-                        array_push($vegetables, $lab);
-                        if($lab === "1")
-                            $lab = "Oui";
-                        else
-                            $lab = "Non";
-                        echo '<p>Nutriment : ' . $str .', Local : '.$lab.'</p>';
-                        $c = '\'';
-                        $isLabel = !$isLabel;
-                        $str = "";
-                        $lab = "";
-                    }
-                }
-                if ($isLabel && $line[$i] !== ',' && $c !== '\'' && $c != ' ') {
-                    $lab .= $c;
-                }
-                $i++;
-                $c = $line[$i];
-            }
+      $vegetables = [];
+      $i = 0;
+      $c = $line[$i];
+      $isWord = false;
+      $isLabel = false;
+      $str = "";
+      while ($c !== ']') {
+        if ($c === '\'') {
+          $isWord = !$isWord;
+          if ($str !== ""){
+            array_push($vegetables, $str);
+            echo'<p>Aliment : '.$str.'</p>';
+            $isLabel = !$isLabel;
+          }
+          $str = "";
+        }
+        if ($isWord && $line[$i] !== '\'') {
+          $str .= $c;
+        }
+        if ($c === ',') {
+          if ($str !== "") {
+            array_push($vegetables, $str);
+            echo '<p>Local : ' . $str .'</p>';
+            $c = '\'';
+            $isLabel = !$isLabel;
+          }
+          $str = "";
+        }
+        if ($isLabel && $line[$i] !== ',' && $c !== '\'') {
+          $str .= $c;
+        }
+        $i++;
+        $c = $line[$i];
+        }
 ?>
 </div>
+
 <!--<div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a onclick="closeNav()" href="javascript:update()">Janvier</a>
@@ -97,4 +89,3 @@
 </div>-->
 <div></div>
 </body>
-
