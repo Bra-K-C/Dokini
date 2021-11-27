@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php session_start();?>
-<html>
+<html lang="fr">
 <head>
+    <title class="titre">Fruits et légumes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../ccs/seasons.css" rel="stylesheet">
@@ -22,8 +23,16 @@
 
     </script>
 </head>
+    
 <body>
-<?php
+  <header>
+    <h1>
+      <img class="wallpaper" src="\IMG\fruitetleg.jpg">
+      <span class="titre">Fruits et légumes de saison</span>
+    </h1>
+  </header>
+  <div id="main">
+   <?php
             $month = (int)date("m")-1;
 
             $fh = fopen("../seasons/saisons.txt", 'r');
