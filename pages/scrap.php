@@ -1,26 +1,28 @@
 <?php
 
-/*$endPoint = "https://fr.wikibooks.org/w/api.php";
-$params = [
-    "action" => "parse",
-    "format" => "json",
-    "page" => "Livre de cuisine/Moussaka",
-];
+function getWikiText($title) {
+    $endPoint = "https://fr.wikibooks.org/w/api.php";
+    $params = [
+        "action" => "query",
+        "format" => "json",
+        "prop" => "extracts",
+        "titles" => $title,
+        "formatversion" => "2",
+        "rvprop" => "content",
+        "rvslots" => "*"
+    ];
 
-$url = $endPoint . "?" . http_build_query( $params );
+    $url = $endPoint . "?" . http_build_query( $params );
 
-$ch = curl_init( $url );
-curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-$output = curl_exec( $ch );
-curl_close( $ch );
+    $ch = curl_init( $url );
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+    $output = curl_exec( $ch );
+    curl_close( $ch );
 
-$result = json_decode( $output, true );
+    $result = json_decode( $output, true );
 
-$fh = fopen("test.txt", 'w');
-fwrite($fh, $result["parse"]["text"]["*"]);
-echo $result["parse"]["text"]["*"];
-
-echo "<br><br>";*/
+    return $result["query"]["pages"][0]["extract"];
+};
 
 $month = localtime()["4"];
 
@@ -102,7 +104,11 @@ foreach( $result["query"]["categorymembers"] as $page ) {
                     }
                 }
                 if (!$alReadyDisplay && substr($recipe["title"], 0, 17) == "Livre de cuisine/")
-                    echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+                    //echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+                    //echo getWikiText($recipe["title"]) . "<br><br>";
+                    echo '<a href="ajax.php?title='.$recipe["title"].'" target="_blank"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+
+
                 array_push($allRecipes, $recipe);
             }
         }
@@ -165,7 +171,8 @@ echo "<br>";
                         }
                     }
                     if (!$alReadyDisplay && substr($recipe["title"], 0, 17) === "Livre de cuisine/" && substr($recipe["title"], 17, 9) !== "Boissons/")
-                        echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+                        echo '<a href="ajax.php?title='.$recipe["title"].'" target="_blank"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+                        //echo getWikiText($recipe["title"]) . "<br><br>";
                     array_push($allRecipes, $recipe);
                 }
             }
