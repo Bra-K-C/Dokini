@@ -34,7 +34,8 @@ h2{
 
 
 .logo{
-  max-width: 5%;
+  width: 30px;
+	height: 30px;
   float:left;
 }
 
