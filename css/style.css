@@ -5,6 +5,7 @@
 header{
   text-align:center;
   background-color: khaki;
+  height: 90px;
 }
 
 nav{
@@ -40,7 +41,7 @@ p{
 }
 
 .logo{
-  height: 90px;
+  height: 85px;
   width: auto;
   float: right;
 }
