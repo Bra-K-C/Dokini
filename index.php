@@ -24,7 +24,7 @@ if (isset($_GET['logout']))
   </header>
 
   <nav>
-    <a class="navig2" href="pages/season_full.php">Fruits et légumes de saison</a>
+    <a class="navig2" href="pages/season_food.php">Fruits et légumes de saison</a>
     <a class="navig" href="pages/scrap.php">Repas</a>
     <?php
     session_start();
