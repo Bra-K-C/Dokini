@@ -12,8 +12,8 @@ nav{
 header{
   padding:5px;
   text-align:center;
-  font-size: 200%;
-  font-weight:bold;
+  background-image:"img/img_legume.jpg";
+  background-attachment:fixed;
 }
 
 p{
@@ -22,6 +22,11 @@ p{
   text-align:center;
 }
 
+
+.titre{
+  font-size: 200%;
+  font-weight:bold;
+}
 
 .logo{
   height: 55px;
