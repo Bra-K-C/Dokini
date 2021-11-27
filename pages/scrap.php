@@ -2,8 +2,8 @@
 
 $month = localtime()["4"];
 
-$fh = fopen("saisons.txt", 'r');
-$line = fget($fh);
+$fh = fopen("../seasons/saisons.txt", 'r');
+$line = fgets($fh);
 for ($x = 0; $x < $month; $x++)
     $line = fgets($fh);
 
@@ -19,8 +19,8 @@ while ($c != ']') {
             array_push($vegetables, $str);
         $str = "";
     }
-    if ($isWord) {
-        $str += $c;
+    if ($isWord && $line[$i] != '\'') {
+        $str .= $c;
     }
     $i++;
     $c = $line[$i];
@@ -44,6 +44,7 @@ $output = curl_exec( $ch );
 curl_close( $ch );
 
 $result = json_decode( $output, true );
+$allRecipes = [];
 
 foreach( $result["query"]["categorymembers"] as $page ) {
     foreach ( $vegetables as $v) {
@@ -72,7 +73,15 @@ foreach( $result["query"]["categorymembers"] as $page ) {
             $recipesJson = json_decode( $output, true );
 
             foreach ( $recipesJson["query"]["categorymembers"] as $recipe ) {
-                echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . $recipe["title"] . '  </a> <br>';
+                $alReadyDisplay = false;
+                for ($i = 0; $i < sizeof($allRecipes); $i++) {
+                    if ($recipe == $allRecipes[$i]) {
+                        $alReadyDisplay = true;
+                    }
+                }
+                if (!$alReadyDisplay && substr($recipe["title"], 0, 17) == "Livre de cuisine/")
+                    echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . $recipe["title"] . '  </a> <br>';
+                    array_push($allRecipes, $recipe);
             }
         }
     }
