@@ -38,6 +38,7 @@ if (isset($_GET['logout']))
     ?><a class="navig" href='www.google.com'> Premium </a>
   </nav>
 
+  <br />
   <h2>Dokini, c'est quoi?</h2>
     <p>
       Dokini est un site web développé par des étudiants pour permettre de manger
