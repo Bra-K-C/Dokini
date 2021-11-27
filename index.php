@@ -35,23 +35,19 @@ if (isset($_GET['logout']))
         echo '<a class="navig" href='.$profil_link.' >'. $_SESSION["username"].' |</a>
         <a class="navig" href= ?logout=true> Deconnexion</a>';
     }
-    ?><a class="navig" href='www.google.com'> Premium </a>
+    ?>
   </nav>
 
   <br />
-  <h2>Dokini, c'est quoi?</h2>
+  <h2 class="soustitre">Dokini, c'est quoi?</h2>
     <p>
-      Dokini est un site web, développé par des étudiants. Le but est de mieux
-      connaître votre niveau actuel pour pouvoir 
-      Dokini vous permet de connaître votre niveau actuel et d'atteindre des
-      objectifs en fonction de vos besoins et de vos envies.
+      <spend class="texteD">Le but de Dokini est de mieux connaître votre niveau actuel pour pouvoir
+      vous proposer des repas adaptés à vos besoins et vos envies. Tout cela en
+      protégeant l'environnement en vous soumettant des recettes qui utilisent
+      des produits de saison.</spend>
+    </p>
+    <p>
+      <a class="abo" href='www.google.com'> Premium </a>
     </p>
 
-    <p>
-      Dokini vous propose diverses recettes selon vos goûts et vos besoins.
-      Mais pas seulement! Les recettes varient selon la période de l'année
-      pour vous permettre de manger des produits de saison. Dokini vous permet
-      aussi de sélectionner des recettes et vous crée votre liste de courses. Tout
-      est plus simple
-    </p>
 </body>
