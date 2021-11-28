@@ -8,40 +8,43 @@ header{
 }
 
 nav{
-  text-align: center;
+  display: flex;
   width: 100%;
+  text-align: center;
+}
+
+nav> div>a{
+  text-decoration: none;
+  color: black;
+}
+
+nav>div> a:hover{
+  text-decoration: none;
+  font-weight:bold;
+  color: black;
 }
 
 p{
+  margin-left: 3%;
+  margin-right: 3%;
   font-size: 150%;
   text-align: center;
 }
 
+.navig>a{
+  flex-basis:50%;
+}
+.navig{
+  flex-basis: 50%;
+  font-size: 180%;
+  display: flex;
+}
+
 .titre{
-  font-size: 225%;
+  font-size: 200%;
   font-weight:bold;
 }
 
 .wallpaper{
   width: 100%;
-}
-
-.navig{
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 20%;
-  text-decoration:none;
-  color:black;
-  font-size: 225%;
-}
-
-.navig2{
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 38%;
-  text-decoration:none;
-  color:black;
-  font-size: 225%;
 }

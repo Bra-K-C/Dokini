@@ -30,51 +30,55 @@
       <span class="titre">Fruits et légumes de saison</span>
     </h1>
   </header>
-
   <div id="main">
-    $month = (int)date("m")-1;
-    $fh = fopen("../seasons/saisons.txt", 'r');
-    $line = fgets($fh);
-    for ($x = 0; $x < $month; $x++)
-      $line = fgets($fh);
+   <?php
+        $month = (int)date("m")-1;
 
-      $vegetables = [];
-      $i = 0;
-      $c = $line[$i];
-      $isWord = false;
-      $isLabel = false;
-      $str = "";
-      while ($c !== ']') {
-        if ($c === '\'') {
-          $isWord = !$isWord;
-          if ($str !== ""){
-            array_push($vegetables, $str);
-            echo'<p>Nutriment : '.$str.'</p>';
-            $isLabel = !$isLabel;
-          }
-          $str = "";
-        }
-        if ($isWord && $line[$i] !== '\'') {
-          $str .= $c;
-        }
-        if ($c === ',') {
-          if ($str !== "") {
-            array_push($vegetables, $str);
-            echo '<p>Local : ' . $str .'</p>';
-            $c = '\'';
-            $isLabel = !$isLabel;
-          }
-          $str = "";
-        }
-        if ($isLabel && $line[$i] !== ',' && $c !== '\'') {
-          $str .= $c;
-        }
-        $i++;
+        $fh = fopen("../seasons/saisons.txt", 'r');
+        $line = fgets($fh);
+        for ($x = 0; $x < $month; $x++)
+           $line = fgets($fh);
+
+        $vegetables = [];
+        $i = 0;
         $c = $line[$i];
+        $isWord = false;
+        $isLabel = false;
+        $str = "";
+        $lab = "";
+        while ($c !== ']') {
+          if ($c === '\'') {
+              $isWord = !$isWord;
+              if ($str !== "") {
+                  array_push($vegetables, $str);
+
+                  $isLabel = !$isLabel;
+              }
+          }
+          if ($isWord && $line[$i] !== '\'') {
+              $str .= $c;
+          }
+          if ($c === ',') {
+              if ($lab !== "") {
+                  array_push($vegetables, $str);
+                  if($lab === " 1")  $lab = "Oui";
+                  else  $lab = "Non";
+                  echo'<p class="aliment"> <strong>'. $str .'</strong>, Local: ' . $lab . '</p>';
+                  $c = '\'';
+                  $isLabel = !$isLabel;
+                  $str = "";
+                  $lab = "";
+              }
+          }
+          if ($isLabel && $line[$i] !== ',' && $c !== '\'') {
+              $lab .= $c;
+          }
+          $i++;
+          $c = $line[$i];
         }
 ?>
 </div>
-  
+
 <!--<div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a onclick="closeNav()" href="javascript:update()">Janvier</a>

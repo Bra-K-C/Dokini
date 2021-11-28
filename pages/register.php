@@ -2,21 +2,20 @@
 
 <html lang="fr">
 <head>
-  <title class="titre">Inscription</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="\ccs\bootstrap.min.css" />
-  <link rel="stylesheet" href="\ccs\styleRegister.css" />
+    <title class="titre">Inscription</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="\ccs\bootstrap.min.css" />
+    <link rel="stylesheet" href="\ccs\styleRegister.css" />
 </head>
 
 <body>
   <header>
     <h1>
-      <img class="wallpaper" src="\IMG\mairie.jpg">
-      <span class="titre">Connexion</span>
+      <span class="titre">Inscription</span>
     </h1>
   </header>
 
-  <form id="form" method="post" action="" name="signup-form">
+<form method="post" action="" name="signup-form">
     <div class="bout">
       <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
       <input type="email" name="email" placeholder="Email" required />
@@ -25,10 +24,10 @@
       <input type="password" name="cpassword" id="cpassword" placeholder="Confirm password" required />
       <br />
       <button type="submit" name="register" value="register">S'enregistrer</button>
-      <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
+      <br />
+      <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour accueil"/></form>
     </div>
-  </form>
-</body>
+</form>
 
 <?php
 session_start();
@@ -65,13 +64,17 @@ if (isset($_POST['register'])) {
                 echo '<p class="success">Enregistrement réussi!</p>';
                 $_SESSION['user_id'] = $id;
                 $_SESSION['username'] = $username;
-                header("Location: /");
+                header("Location: /pages/payment_form.php");
             } else {
                 echo '<p class="error">Erreur</p>';
             }
         }
     }
-
+    $_SESSION['paid'] = false;
 
 }
 ?>
+
+
+</body>
+</html>

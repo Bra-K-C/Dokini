@@ -4,7 +4,7 @@ body{
 
 header{
   text-align: center;
-  background-color: RGB(199,121,99);
+  background-color: RGB(144,183,54);
 }
 
 
@@ -13,11 +13,14 @@ header{
   font-weight:bold;
 }
 
+<<<<<<< HEAD
 .wallpaper{
   width: 100%;
   height: 500px;
 }
 
+=======
+>>>>>>> 560aa891fc7f8d18aa7dc7adf7c11e1db714b675
 .bout{
   text-align: center;
 }

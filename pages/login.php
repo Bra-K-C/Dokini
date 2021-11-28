@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 
+
+<?php
+include '../utils/utils.php';
+if (isset($_GET['logout']))
+    utils::DeleteAllCookies();
+?>
+
+
 <html lang="fr">
 <head>
     <title class="titre">Connexion</title>
@@ -11,7 +19,6 @@
 <body>
   <header>
     <h1>
-      <img class="wallpaper" src="\IMG\ecole.jpg">
       <span class="titre">Connexion</span>
     </h1>
   </header>
@@ -30,7 +37,6 @@
 </body>
 
 <?php
-session_start();
 include('../config.php');
 global $db;
 if (isset($_POST['login'])) {
@@ -46,6 +52,7 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $result['hash_psswd'])) {
             $_SESSION['user_id'] = $result['id'];
             $_SESSION['username'] = $result['username'];
+            $_SESSION['paid'] = $result['paid'];
             echo '<p class="success">Vous êtes connecté!</p>';
             header("Location: /");
         } else {
