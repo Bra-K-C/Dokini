@@ -47,8 +47,5 @@ $payment = new Payment;
         </div>
     </div>
 </div>
-<?php
-$payment.complete($payment);
-?>
 </body>
 </html>
