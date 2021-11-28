@@ -101,7 +101,7 @@ else {
     $username = $_SESSION['username'];
     $query = $db->prepare("DELETE * FROM users WHERE username=:username");
     $query->execute();
-    $_SESSION['user_id'] = 0;
+    session_unset();
 }
 
 ?>

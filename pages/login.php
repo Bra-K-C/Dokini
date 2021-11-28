@@ -36,6 +36,7 @@ if (isset($_GET['logout']))
 </body>
 
 <?php
+session_start();
 include('../config.php');
 global $db;
 if (isset($_POST['login'])) {

@@ -34,7 +34,7 @@ if (isset($_GET['logout']))
         echo '<div class="navig">
         <a href="pages/season_food.php">Fruits et légumes</a>
         <a href="pages/scrap.php">Repas</a>
-        <a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
+        <a>'. $_SESSION["username"].' </a>
         <a href= ?logout=true> Deconnexion</a></div>';
     }
     ?>

@@ -5,7 +5,7 @@ class utils
 {
     public static function IsConnected(): bool
     {
-        return isset($_SESSION["user_id"]) && $_SESSION["user_id"] != 0;
+        return isset($_SESSION["user_id"]);
     }
 
     public static function DeleteAllCookies(){
