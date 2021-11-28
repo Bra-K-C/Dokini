@@ -10,22 +10,34 @@ header{
 nav{
   display: flex;
   width: 100%;
+  text-align: center;
 }
 
-nav> div > div > a{
+nav> div>a{
   text-decoration: none;
   color: black;
 }
 
-nav> div > div > a:hover{
+nav>div> a:hover{
   text-decoration: none;
   font-weight:bold;
   color: black;
 }
 
 p{
+  margin-left: 3%;
+  margin-right: 3%;
   font-size: 150%;
   text-align: center;
+}
+
+.navig>a{
+  flex-basis:50%;
+}
+.navig{
+  flex-basis: 50%;
+  font-size: 180%;
+  display: flex;
 }
 
 .titre{
@@ -35,17 +47,4 @@ p{
 
 .wallpaper{
   width: 100%;
-}
-
-.navig{
-  flex-basis: 50%;
-  text-decoration:none;
-  color:black;
-  font-size: 180%;
-  text-align: center;
-  display: flex;
-}
-
-.navig2{
-  flex-basis: 50%;
 }

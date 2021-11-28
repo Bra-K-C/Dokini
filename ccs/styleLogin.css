@@ -7,6 +7,22 @@ header{
   background-color: RGB(144,183,54);
 }
 
+nav{
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+nav> div > a{
+  text-decoration: none;
+  color: black;
+}
+
+nav> div > a:hover{
+  text-decoration: none;
+  font-weight:bold;
+  color: black;
+}
 
 .titre{
   font-size: 180%;
@@ -15,4 +31,13 @@ header{
 
 .bout{
   text-align: center;
+}
+
+.navig>a{
+  flex-basis:50%;
+}
+.navig{
+  flex-basis: 50%;
+  font-size: 180%;
+  display: flex;
 }
