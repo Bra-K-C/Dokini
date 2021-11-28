@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<?php session_start();?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php session_start()?>
 <html lang="fr">
 <head>
-    <title class="titre">Fruits et légumes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../ccs/seasons.css" rel="stylesheet">
-    <script type="text/javascript">
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
+  <title class="titre">Fruits et légumes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../ccs/seasons.css" rel="stylesheet">
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      }
 
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-        }
-
-        function jan(){
-            <?php echo $_SESSION['month']; ?> = 0;
-        }
-
-    </script>
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    function jan(){
+      <?php echo $_SESSION['month']; ?> = 0;
+    }
+  </script>
 </head>
 
 <body>
