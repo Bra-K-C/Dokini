@@ -25,7 +25,7 @@
       <br />
       <button type="submit" name="register" value="register">S'enregistrer</button>
       <br />
-      <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour au site "/></form>
+      <form> </br> </br><input type="button" onclick="location.href='../index.php';" value="Retour accueil"/></form>
     </div>
 </form>
 
@@ -64,13 +64,13 @@ if (isset($_POST['register'])) {
                 echo '<p class="success">Enregistrement réussi!</p>';
                 $_SESSION['user_id'] = $id;
                 $_SESSION['username'] = $username;
-                header("Location: /");
+                header("Location: /pages/payment_form.php");
             } else {
                 echo '<p class="error">Erreur</p>';
             }
         }
     }
-
+    $_SESSION['paid'] = false;
 
 }
 ?>

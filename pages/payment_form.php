@@ -1,6 +1,5 @@
 <?php
-include "vendor/autoload.php";
-include "src/Payment/payment.php";
+include "Payment.php";
 use Payment\Payment;
 $payment = new Payment;
 // ?>
@@ -26,23 +25,15 @@ $payment = new Payment;
                 <fieldset>
                     <!-- Form Name -->
                     <legend>Pay with PayPal</legend>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="amount">Payment Amount</label>
-                        <div class="col-md-4">
-                            <input id="amount" name="amount" type="text" placeholder="amount to pay" class="form-control input-md" required="">
-                            <span class="help-block">help</span>
-                        </div>
-                    </div>
-                    <input type='hidden' name='business' value='sb-7j4hl606677@personal.example.com'>
-                    <input type='hidden' name='item_name' value='Camera'>
-                    <input type='hidden' name='item_number' value='CAM#N1'>
-                    <!--<input type='hidden' name='amount' value='10'>-->
+                    <input type='hidden' name='business' value='sb-xk3zi8735117@business.example.com'>
+                    <input type='hidden' name='item_name' value='Dokini'>
+                    <input type='hidden' name='item_number' value='Dokini#N1'>
                     <input type='hidden' name='no_shipping' value='1'>
-                    <input type='hidden' name='currency_code' value='USD'>
-                    <input type='hidden' name='notify_url' value='<?php echo $payment->route("notify", "") ?>'>
-                    <input type='hidden' name='cancel_return' value='<?php echo $payment->route("http://phpstack-275615-1077014.cloudwaysapps.com/cancel.php", "") ?>'>
-                    <input type='hidden' name='return' value='<?php echo $payment->route("return", "http://phpstack-275615-1077014.cloudwaysapps.com/return.php") ?>'>
+                    <input type='hidden' name='currency_code' value='EUR'>
+                    <input type='hidden' name='amount' value='0.01'>
+                    <input type='hidden' name='notify_url' value='<?php echo $payment->route("https://e6ec-163-5-2-71.ngrok.io", "") ?>'>
+                    <input type='hidden' name='cancel_return' value='<?php echo $payment->route("https://e6ec-163-5-2-71.ngrok.io", "") ?>'>
+                    <input type='hidden' name='return' value='<?php echo $payment->route("", "./pages/register.php") ?>'>
                     <input type="hidden" name="cmd" value="_xclick">
                     <!-- Button -->
                     <div class="form-group">
@@ -56,5 +47,8 @@ $payment = new Payment;
         </div>
     </div>
 </div>
+<?php
+$payment.complete($payment);
+?>
 </body>
 </html>

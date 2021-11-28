@@ -9,8 +9,8 @@ class Payment
     public function gateway()
     {
         $gateway = Omnipay::create('PayPal_Express');
-        $gateway->setUsername("sb-7j4hl606677@personal.example.com");
-        $gateway->setPassword("ARySNgUCvyU9tEBp-zsd0WbbNO_7Nxxxxoi3xxxxh2cTuDxRh7xxxxVu9W5ZkIBGYqjqfzHrjY3wta");
+        $gateway->setUsername("sb-xk3zi8735117@business.example.com");
+        $gateway->setPassword("H&p4<7+b");
         $gateway->setSignature("EOEwezsNWMWQM63xxxxxknr8QLoAOoC6lD_-kFqjgKxxxxxwGWIvsJO6vP3syd10xspKbx7LgurYNt9");
         $gateway->setTestMode(true);
         return $gateway;
@@ -48,14 +48,15 @@ class Payment
      */
     public function getCancelUrl($order = "")
     {
-        return $this->route('http://phpstack-275615-1077014.cloudwaysapps.com/cancel.php', $order);
+
+        return $this->route('https://e6ec-163-5-2-71.ngrok.io', $order);
     }
     /**
      * @param $order
      */
     public function getReturnUrl($order = "")
     {
-        return $this->route('http://phpstack-275615-1077014.cloudwaysapps.com/return.php', $order);
+        return $this->route('https://e6ec-163-5-2-71.ngrok.io/pages/register.php', $order);
     }
     public function route($name, $params)
     {
