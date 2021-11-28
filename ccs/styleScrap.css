@@ -1,0 +1,33 @@
+body{
+ background-color:papayawhip;
+}
+
+header{
+  text-align: center;
+  background-color: RGB(144,183,54);
+}
+
+
+.titre{
+  font-size: 180%;
+  font-weight:bold;
+}
+
+.bout{
+  text-align: center;
+}
+
+.lien{
+  text-decoration: none;
+  color: black;
+}
+
+.lien:hover{
+  font-weight:bold;
+  color: #000;
+}
+
+.centrer{
+  text-align: center;
+  text-transform: capitalize;
+}
