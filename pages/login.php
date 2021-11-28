@@ -23,25 +23,6 @@ if (isset($_GET['logout']))
     </h1>
   </header>
 
-  <nav>
-    <div class="navig">
-      <a href="pages/season_food.php">Fruits et légumes</a>
-      <a href="pages/scrap.php">Repas</a>
-    </div>
-    <?php
-    session_start();
-    if(!utils::IsConnected()){
-        echo'<div class="navig"> <a href="pages/login.php">Connexion</a>
-        <a href="pages/register.php"> Inscription</a></div>';
-    }
-    else{
-        $profil_link = 'pages/profil.php?id='.$_SESSION["user_id"];
-        echo '<div class="navig"> <a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
-        <a href= ?logout=true> Deconnexion</a></div>';
-    }
-    ?>
-  </nav>
-
   <form method="post" action="" name="login-form">
     <div class="bout">
         <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Username" required />
