@@ -49,14 +49,14 @@ class Payment
     public function getCancelUrl($order = "")
     {
 
-        return $this->route(' https://03d5-163-5-2-71.ngrok.io', $order);
+        return $this->route('  https://170f-163-5-2-71.ngrok.io', $order);
     }
     /**
      * @param $order
      */
     public function getReturnUrl($order = "")
     {
-        return $this->route(' https://03d5-163-5-2-71.ngrok.io/pages/register.php', $order);
+        return $this->route(' https://170f-163-5-2-71.ngrok.io/pages/register.php', $order);
     }
     public function route($name, $params)
     {

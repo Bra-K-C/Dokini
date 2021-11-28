@@ -30,9 +30,9 @@ $payment = new Payment;
                     <input type='hidden' name='item_number' value='Dokini#N1'>
                     <input type='hidden' name='no_shipping' value='1'>
                     <input type='hidden' name='currency_code' value='EUR'>
-                    <input type='hidden' name='amount' value='0.01'>
-                    <input type='hidden' name='notify_url' value='<?php echo $payment->route(" https://03d5-163-5-2-71.ngrok.io", "") ?>'>
-                    <input type='hidden' name='cancel_return' value='<?php echo $payment->route(" https://03d5-163-5-2-71.ngrok.io", "") ?>'>
+                    <input type='hidden' name='amount' value='300'>
+                    <input type='hidden' name='notify_url' value='<?php echo $payment->route("  https://170f-163-5-2-71.ngrok.io", "") ?>'>
+                    <input type='hidden' name='cancel_return' value='<?php echo $payment->route("  https://170f-163-5-2-71.ngrok.io", "") ?>'>
                     <input type='hidden' name='return' value='<?php echo $payment->route("", "./pages/register.php") ?>'>
                     <input type="hidden" name="cmd" value="_xclick">
                     <!-- Button -->
