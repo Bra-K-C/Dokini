@@ -1,15 +1,29 @@
 <!DOCTYPE html>
+<html lang="fr">
 
-<form>
+<head>
+    <title class="titre">Repas</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="\ccs\bootstrap.min.css" />
+    <link rel="stylesheet" href="\ccs\styleScrap.css" />
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span class="titre">Création de repas</span>
+    </h1>
+  </header>
+
+  <form>
     <label for="childrenNb">Nombre d'enfants :</label><br>
     <input type="number" name = "childrenNb" id ="childrenNb" required><br>
     <label for="mynAge">Age moyen :</label><br>
     <input type="number" name = "mynAge" id="mynAge" required><br><br>
     <input type="submit" value="Send" name="send" ></input>
-</form>
+  </form>
 
 <?php
-
 if(isset($_GET['send'])){
     $nbChildren = $_GET['childrenNb'];
     $mynAge = $_GET['mynAge'];
@@ -124,7 +138,7 @@ if(isset($_GET['send'])){
                     if (!$alReadyDisplay && substr($recipe["title"], 0, 17) == "Livre de cuisine/")
                         //echo '<a href="https://fr.wikibooks.org/wiki/' . $recipe["title"] . '"> ' . substr($recipe["title"], 17) . '  </a> <br>';
                         //echo getWikiText($recipe["title"]) . "<br><br>";
-                        echo '<a href="ajax.php?title='.$recipe["title"].'" target="_blank"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+                        echo '<a class="lieng" href="ajax.php?title='.$recipe["title"].'" target="_blank"> ' . substr($recipe["title"], 17) . '  </a> <br>';
 
 
                     array_push($allRecipes, $recipe);
@@ -189,7 +203,7 @@ if(isset($_GET['send'])){
                         }
                     }
                     if (!$alReadyDisplay && substr($recipe["title"], 0, 17) === "Livre de cuisine/" && substr($recipe["title"], 17, 9) !== "Boissons/")
-                        echo '<a href="ajax.php?title='.$recipe["title"].'" target="_blank"> ' . substr($recipe["title"], 17) . '  </a> <br>';
+                        echo '<a class="liend" href="ajax.php?title='.$recipe["title"].'" target="_blank"> ' . substr($recipe["title"], 17) . '  </a> <br>';
                     //echo getWikiText($recipe["title"]) . "<br><br>";
                     array_push($allRecipes, $recipe);
                 }
@@ -197,5 +211,5 @@ if(isset($_GET['send'])){
         }
     }
 }
-
-
+?>
+</body>

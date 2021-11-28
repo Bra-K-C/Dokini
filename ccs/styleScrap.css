@@ -7,23 +7,36 @@ header{
   background-color: RGB(144,183,54);
 }
 
-
 .titre{
   font-size: 180%;
   font-weight:bold;
 }
 
-.lien{
+.lieng{
+  margin-left: 10%;
   text-decoration: none;
   color: black;
+  text-align: center;
+  text-transform: capitalize;
 }
-
-.lien:hover{
+.lieng:hover{
   font-weight:bold;
   color: #000;
 }
 
-.centrer{
+.liend{
+  margin-right: 10%;
+  text-decoration: none;
+  color: black;
   text-align: center;
   text-transform: capitalize;
+}
+.liend:hover{
+  font-weight:bold;
+  color: #000;
+}
+
+
+.bout{
+  text-align: center;
 }

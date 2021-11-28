@@ -8,17 +8,16 @@ header{
 }
 
 nav{
-  display: flex;
   width: 100%;
   text-align: center;
 }
 
-nav> div>a{
+nav> .navig>a{
   text-decoration: none;
   color: black;
 }
 
-nav>div> a:hover{
+nav>.navig> a:hover{
   text-decoration: none;
   font-weight:bold;
   color: black;
@@ -31,13 +30,13 @@ p{
   text-align: center;
 }
 
-.navig>a{
-  flex-basis:50%;
-}
 .navig{
-  flex-basis: 50%;
-  font-size: 180%;
   display: flex;
+}
+
+.navig >a{
+  font-size: 180%;
+  flex-basis: 50%;
 }
 
 .titre{

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <?php
 include '../utils/utils.php';
 if (isset($_GET['logout']))
