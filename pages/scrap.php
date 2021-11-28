@@ -1,5 +1,14 @@
-<?php
+<!DOCTYPE html>
 
+<html lang="fr">
+<head>
+    <title class="titre">Dokini</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="ccs/bootstrap.min.css" />
+    <link rel="stylesheet" href="ccs/style.css" />
+</head>
+
+<?php
 function getWikiText($title) {
     $endPoint = "https://fr.wikibooks.org/w/api.php";
     $params = [
@@ -69,7 +78,16 @@ curl_close( $ch );
 
 $result = json_decode( $output, true );
 $allRecipes = [];
+?>
 
+<body>
+  <header>
+    <h1>
+      <span class="titre">Les différents repas</span>
+    </h1>
+  </header>
+
+<?php
 foreach( $result["query"]["categorymembers"] as $page ) {
     foreach ($vegetables as $v) {
         if ($v[0] === 'a' || $v[0] === 'e' || $v[0] === 'i' || $v[0] === 'o' || $v[0] === 'u' || $v[0] === 'y')
@@ -178,3 +196,5 @@ echo "<br>";
             }
         }
 }
+?>
+</body>

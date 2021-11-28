@@ -8,8 +8,19 @@ header{
 }
 
 nav{
-  text-align: center;
+  display: flex;
   width: 100%;
+}
+
+nav> div > div > a{
+  text-decoration: none;
+  color: black;
+}
+
+nav> div > div > a:hover{
+  text-decoration: none;
+  font-weight:bold;
+  color: black;
 }
 
 p{
@@ -27,21 +38,14 @@ p{
 }
 
 .navig{
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 20%;
+  flex-basis: 50%;
   text-decoration:none;
   color:black;
   font-size: 180%;
+  text-align: center;
+  display: flex;
 }
 
 .navig2{
-  display: inline-block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 38%;
-  text-decoration:none;
-  color:black;
-  font-size: 180%;
+  flex-basis: 50%;
 }
