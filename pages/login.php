@@ -52,7 +52,6 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $result['hash_psswd'])) {
             $_SESSION['user_id'] = $result['id'];
             $_SESSION['username'] = $result['username'];
-            $_SESSION['paid'] = $result['paid'];
             echo '<p class="success">Vous êtes connecté!</p>';
             header("Location: /");
         } else {

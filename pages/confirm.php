@@ -72,7 +72,8 @@ was "INVALID".
 */
 if ($verified && $_POST['payment_status'] === "Completed" && $_POST['receiver_email'] === "batptiste.perrier@gmail.com"
         && $_POST['payment_amount'] === 300 && $_POST['payment_currency'] === "US") {
-    $_SESSION['paid'] = true;
+    pass;
+    /*https://03d5-163-5-2-71.ngrok.io/
     /*
     Once you have a verified IPN you need to do a few more checks on the POST
     fields--typically against data you stored in your database during when the
@@ -97,7 +98,10 @@ else {
     a good idea to have a developer or sys admin manually investigate any
     invalid IPN.
     */
-    $_SESSION['paid'] = false;
+    $username = $_SESSION['username'];
+    $query = $db->prepare("DELETE * FROM users WHERE username=:username");
+    $query->execute();
+    $_SESSION['user_id'] = 0;
 }
 
 ?>

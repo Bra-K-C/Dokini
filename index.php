@@ -30,7 +30,6 @@ if (isset($_GET['logout']))
         <a href="pages/register.php"> Inscription</a></div>';
     }
     else{
-        if(!$_SESSION['paid']){header('Location: /pages/payment_form.php');}
         $profil_link = 'pages/profil.php?id='.$_SESSION["user_id"];
         echo '<div class="navig">
         <a href="pages/season_food.php">Fruits et légumes</a>
