@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <?php
@@ -24,18 +23,20 @@ if (isset($_GET['logout']))
   </header>
 
   <nav>
-    <a class="navig2" href="pages/season_food.php">Fruits et légumes de saison</a>
-    <a class="navig" href="pages/scrap.php">Repas</a>
+    <div class="navig">
+      <a href="pages/season_food.php">Fruits et légumes</a>
+      <a href="pages/scrap.php">Repas</a>
+    </div>
     <?php
     session_start();
     if(!utils::IsConnected()){
-        echo'<a class="navig" href="pages/login.php">Connexion</a>
-        <a class="navig" href="pages/register.php"> Inscription</a>';
+        echo'<div class="navig"> <a href="pages/login.php">Connexion</a>
+        <a href="pages/register.php"> Inscription</a></div>';
     }
     else{
         $profil_link = 'pages/profil.php?id='.$_SESSION["user_id"];
-        echo '<a class="navig" href='.$profil_link.' >'. $_SESSION["username"].' |</a>
-        <a class="navig" href= ?logout=true> Deconnexion</a>';
+        echo '<div class="navig"> <a href='.$profil_link.' >'. $_SESSION["username"].' |</a>
+        <a href= ?logout=true> Deconnexion</a></div>';
     }
     ?>
   </nav>

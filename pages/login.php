@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 
+
+<?php
+include '../utils/utils.php';
+if (isset($_GET['logout']))
+    utils::DeleteAllCookies();
+?>
+
+
 <html lang="fr">
 <head>
     <title class="titre">Connexion</title>
@@ -29,7 +37,6 @@
 </body>
 
 <?php
-session_start();
 include('../config.php');
 global $db;
 if (isset($_POST['login'])) {

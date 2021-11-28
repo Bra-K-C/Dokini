@@ -8,6 +8,13 @@ header{
   background-color: red;
 }
 
+p{
+  text-align: center;
+  width: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 .titre{
   font-size: 180%;
   font-weight:bold;
@@ -64,11 +71,6 @@ header{
     background-color: #444;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
@@ -81,5 +83,6 @@ header{
 }
 
 #main > .aliment{
-  flex-basis: 25%;
+  flex-basis: 18%;
+  text-transform: capitalize;
 }
